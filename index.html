@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Хрестики-Нолики - класична гра для двох гравців. Завантажте безкоштовно на Google Play!">
+    <title>Хрестики-Нолики - Завантажте гру на Google Play</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #1e90ff, #00b4db);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #1e90ff;
+        }
+        .section p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .screenshots {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .screenshots img {
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #1e90ff;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #0077cc;
+        }
+        .language-selector {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .language-selector select {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .screenshots img {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Хрестики-Нолики</h1>
+        <p>Класична гра для двох гравців – тепер на вашому телефоні!</p>
+    </header>
+
+    <div class="container">
+        <div class="language-selector">
+            <label for="language">Виберіть мову: </label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="uk">Українська</option>
+                <option value="ar">العربية</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="es">Español</option>
+                <option value="de">Deutsch</option>
+                <option value="tr">Türkçe</option>
+            </select>
+        </div>
+
+        <div class="section" id="description">
+            <h2>Про гру</h2>
+            <p>"Хрестики-Нолики" – це класична гра для двох гравців, де ви можете грати проти друга або комп’ютера. Мета гри – вибудувати три свої символи (X або O) у ряд, колонку або по діагоналі. Гра підтримує 7 мов і має простий, інтуїтивно зрозумілий інтерфейс.</p>
+        </div>
+
+        <div class="section" id="screenshots">
+            <h2>Скріншоти</h2>
+            <div class="screenshots">
+                <!-- Додайте посилання на скріншоти вашої гри -->
+                <img src="https://via.placeholder.com/200x400?text=Скріншот+1" alt="Скріншот 1">
+                <img src="https://via.placeholder.com/200x400?text=Скріншот+2" alt="Скріншот 2">
+                <img src="https://via.placeholder.com/200x400?text=Скріншот+3" alt="Скріншот 3">
+            </div>
+        </div>
+
+        <div class="section" id="download">
+            <h2>Завантажте гру</h2>
+            <p>Готові зіграти? Завантажте "Хрестики-Нолики" на Google Play безкоштовно!</p>
+            <a href="https://play.google.com/store/apps/details?id=com.pvk.tictactoe" class="download-btn">Завантажити зараз</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Хрестики-Нолики. Усі права захищені.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            uk: {
+                title: "Хрестики-Нолики",
+                subtitle: "Класична гра для двох гравців – тепер на вашому телефоні!",
+                about: "Про гру",
+                description: "\"Хрестики-Нолики\" – це класична гра для двох гравців, де ви можете грати проти друга або комп’ютера. Мета гри – вибудувати три свої символи (X або O) у ряд, колонку або по діагоналі. Гра підтримує 7 мов і має простий, інтуїтивно зрозумілий інтерфейс.",
+                screenshots: "Скріншоти",
+                download: "Завантажте гру",
+                downloadText: "Готові зіграти? Завантажте \"Хрестики-Нолики\" на Google Play безкоштовно!",
+                downloadBtn: "Завантажити зараз",
+                footer: "&copy; 2025 Хрестики-Нолики. Усі права захищені."
+            },
+            ar: {
+                title: "X-O",
+                subtitle: "لعبة كلاسيكية لشخصين – الآن على هاتفك!",
+                about: "حول اللعبة",
+                description: "\"X-O\" هي لعبة كلاسيكية لشخصين، حيث يمكنك اللعب ضد صديق أو الكمبيوتر. الهدف من اللعبة هو ترتيب ثلاثة من رموزك (X أو O) في صف، عمود، أو قطري. اللعبة تدعم 7 لغات وتتميز بواجهة بسيطة وسهلة الاستخدام.",
+                screenshots: "لقطات الشاشة",
+                download: "قم بتحميل اللعبة",
+                downloadText: "هل أنت جاهز للعب؟ قم بتحميل \"X-O\" من Google Play مجانًا!",
+                downloadBtn: "تحميل الآن",
+                footer: "&copy; 2025 X-O. جميع الحقوق محفوظة."
+            },
+            en: {
+                title: "Tic-Tac-Toe",
+                subtitle: "A classic game for two players – now on your phone!",
+                about: "About the Game",
+                description: "\"Tic-Tac-Toe\" is a classic two-player game where you can play against a friend or the computer. The goal is to align three of your symbols (X or O) in a row, column, or diagonal. The game supports 7 languages and features a simple, intuitive interface.",
+                screenshots: "Screenshots",
+                download: "Download the Game",
+                downloadText: "Ready to play? Download \"Tic-Tac-Toe\" on Google Play for free!",
+                downloadBtn: "Download Now",
+                footer: "&copy; 2025 Tic-Tac-Toe. All rights reserved."
+            },
+            fr: {
+                title: "Tic-Tac-Toe",
+                subtitle: "Un jeu classique pour deux joueurs – maintenant sur votre téléphone !",
+                about: "À propos du jeu",
+                description: "\"Tic-Tac-Toe\" est un jeu classique pour deux joueurs où vous pouvez jouer contre un ami ou l’ordinateur. L’objectif est d’aligner trois de vos symboles (X ou O) dans une ligne, une colonne ou une diagonale. Le jeu prend en charge 7 langues et dispose d’une interface simple et intuitive.",
+                screenshots: "Captures d’écran",
+                download: "Téléchargez le jeu",
+                downloadText: "Prêt à jouer ? Téléchargez \"Tic-Tac-Toe\" sur Google Play gratuitement !",
+                downloadBtn: "Télécharger maintenant",
+                footer: "&copy; 2025 Tic-Tac-Toe. Tous droits réservés."
+            },
+            es: {
+                title: "Tic-Tac-Toe",
+                subtitle: "¡Un juego clásico para dos jugadores – ahora en tu teléfono!",
+                about: "Acerca del juego",
+                description: "\"Tic-Tac-Toe\" es un juego clásico para dos jugadores donde puedes jugar contra un amigo o la computadora. El objetivo es alinear tres de tus símbolos (X o O) en una fila, columna o diagonal. El juego soporta 7 idiomas y cuenta con una interfaz simple e intuitiva.",
+                screenshots: "Capturas de pantalla",
+                download: "Descarga el juego",
+                downloadText: "¿Listo para jugar? ¡Descarga \"Tic-Tac-Toe\" en Google Play gratis!",
+                downloadBtn: "Descargar ahora",
+                footer: "&copy; 2025 Tic-Tac-Toe. Todos los derechos reservados."
+            },
+            de: {
+                title: "Tic-Tac-Toe",
+                subtitle: "Ein klassisches Spiel für zwei Spieler – jetzt auf deinem Handy!",
+                about: "Über das Spiel",
+                description: "\"Tic-Tac-Toe\" ist ein klassisches Spiel für zwei Spieler, bei dem du gegen einen Freund oder den Computer spielen kannst. Das Ziel ist es, drei deiner Symbole (X oder O) in einer Reihe, Spalte oder Diagonale anzuordnen. Das Spiel unterstützt 7 Sprachen und bietet eine einfache, intuitive Benutzeroberfläche.",
+                screenshots: "Screenshots",
+                download: "Spiel herunterladen",
+                downloadText: "Bereit zu spielen? Lade \"Tic-Tac-Toe\" kostenlos im Google Play Store herunter!",
+                downloadBtn: "Jetzt herunterladen",
+                footer: "&copy; 2025 Tic-Tac-Toe. Alle Rechte vorbehalten."
+            },
+            tr: {
+                title: "X-O",
+                subtitle: "İki oyuncu için klasik bir oyun – şimdi telefonunuzda!",
+                about: "Oyun Hakkında",
+                description: "\"X-O\", iki oyuncunun oynayabileceği klasik bir oyundur; bir arkadaşınıza veya bilgisayara karşı oynayabilirsiniz. Amaç, üç sembolünüzü (X veya O) bir sıra, sütun veya çapraz olarak hizalamaktır. Oyun 7 dili destekler ve basit, sezgisel bir arayüze sahiptir.",
+                screenshots: "Ekran Görüntüleri",
+                download: "Oyunu İndir",
+                downloadText: "Oynamaya hazır mısınız? \"X-O\" oyununu Google Play’den ücretsiz indirin!",
+                downloadBtn: "Şimdi İndir",
+                footer: "&copy; 2025 X-O. Tüm hakları saklıdır."
+            }
+        };
+
+        function changeLanguage() {
+            const lang = document.getElementById('language').value;
+            const t = translations[lang];
+            document.querySelector('header h1').textContent = t.title;
+            document.querySelector('header p').textContent = t.subtitle;
+            document.querySelector('#description h2').textContent = t.about;
+            document.querySelector('#description p').textContent = t.description;
+            document.querySelector('#screenshots h2').textContent = t.screenshots;
+            document.querySelector('#download h2').textContent = t.download;
+            document.querySelector('#download p').textContent = t.downloadText;
+            document.querySelector('.download-btn').textContent = t.downloadBtn;
+            document.querySelector('footer p').textContent = t.footer;
+            document.documentElement.lang = lang;
+        }
+    </script>
+</body>
+</html>
